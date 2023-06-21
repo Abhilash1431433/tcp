@@ -1,0 +1,26 @@
+name: Ngrok Tunnel
+
+on:
+  push:
+    branches:
+      - main  # Replace with your desired branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install ngrok
+        run: |
+          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+          unzip ngrok-stable-linux-amd64.zip
+          chmod +x ngrok
+          sudo mv ngrok /usr/local/bin/
+
+      - name: Start ngrok tunnel
+        run: |
+          ngrok authtoken 2RHyDNVWfXuybUSwMOeZY8AzT7O_4NnkfVHfK4Q9nv1mJu6tp
+          ngrok tcp 3000
