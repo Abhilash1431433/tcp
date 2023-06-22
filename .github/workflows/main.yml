@@ -23,4 +23,4 @@ jobs:
       - name: Start ngrok tunnel
         run: |
           ngrok authtoken 2RITmnKFg0uLNY4flJ2N9Gp4TLf_4gtVfGNqsTjbQv5KaK8md
-          ngrok https 80
+          ngrok http 80
