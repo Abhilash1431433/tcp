@@ -22,5 +22,5 @@ jobs:
 
       - name: Start ngrok tunnel
         run: |
-          ngrok authtoken 2RHyDNVWfXuybUSwMOeZY8AzT7O_4NnkfVHfK4Q9nv1mJu6tp
-          ngrok tcp 3000
+          ngrok authtoken 2RITmnKFg0uLNY4flJ2N9Gp4TLf_4gtVfGNqsTjbQv5KaK8md
+          ngrok tcp 4543
